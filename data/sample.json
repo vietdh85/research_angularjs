@@ -1,0 +1,11 @@
+[{ "month": "JAN", "value":2050},
+  { "month": "FEB", "value":2040},
+  { "month": "MAR", "value":2000},
+  { "month": "APR", "value":2100},
+  { "month": "MAY", "value":2400},
+  { "month": "JUN", "value":2500},
+  { "month": "JUL", "value":2060},
+  { "month": "AUG", "value":2080},
+  { "month": "SEP", "value":2020},
+  { "month": "OCT", "value":2200}
+]

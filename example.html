@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="exampleApp">
+<head>
+    <title>AngularJS Demo</title>
+    <link href="/css/bootstrap.min.css" >
+    <link href="/css/bootstrap-theme.min.css" >
+
+    <script src="/js/angular.min.1.0.8.js"></script>
+    <script>
+        var myApp = angular.module("exampleApp", []);
+        myApp.controller("dayCtrl", function($scope){
+           // ...
+            var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Sartuday"];
+
+            $scope.day = dayNames[new Date().getDay()];
+        });
+
+    </script>
+</head>
+<body>
+    <div class="panel" ng-controller="dayCtrl">
+        <div class="page-header">
+            <h3>AngularJS App</h3>
+        </div>
+        <h4>Today is {{ day || "(unknow)" }}</h4>
+    </div>
+</body>
+</html>

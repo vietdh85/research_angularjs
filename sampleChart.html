@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sampleChart">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample chart</title>
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+
+    <script src="/js/jquery.min.1.9.1.js"></script>
+    <script src="/js/angular.min.1.0.8.js"></script>
+    <script src="/js/highcharts.js"></script>
+    <script src="/js/highcharts-ng.js"></script>
+    <script src="/js/exporting.js"></script>
+
+    <script src="/controllers/sampleChart.js"></script>
+
+</head>
+<body ng-controller="sampleChartCtrl">
+
+    <div>
+        <button style="width:80px; height:36px; margin-right: 20px;" ng-repeat="item in chartTypes" ng-click="changeType(item)" ng-class="getClass(item)">{{ item }}</button>
+    </div>
+
+    <div style="padding-top:10px;">
+        <label ng-repeat="item in dataTypes" ng-click="changeDataType(item)" style="margin-right:20px;">
+            <input type="radio" name="dataType" ng-model="selectedDataType" value="{{ item }}"> {{ item }}
+        </label>
+    </div>
+
+    <highchart id="chart1" config="chartConfig"></highchart>
+</body>
+</html>
