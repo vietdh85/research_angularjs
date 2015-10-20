@@ -1,0 +1,7 @@
+<h4>Repeat Demo : key and value</h4>
+<table>
+    <tr ng-repeat="item in todos" ng-class-odd="'odd'" ng-class-even="'even'">
+        <td>{{ $index + 1 }}</td>
+        <td ng-repeat="(key, value) in item">{{ key }} - {{ value }}</td>
+    </tr>
+</table>
