@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>TO DO List</title>
+    <script src="/js/angular.min.js"></script>
+    <link href="/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/bootstrap-theme.css" rel="stylesheet" />
+
+    <script>
+        var myApp = angular.module("myApp", []);
+
+        myApp.controller("selectCtrl", function($scope){
+            $scope.step = null;
+
+            $scope.conditions = [
+                { id:'0', name:'vh1' },
+                { id:'1', name:'vh2' },
+                { id:'2', name:'vh3' }
+            ];
+        });
+
+    </script>
+
+</head>
+<body ng-controller="selectCtrl">
+
+<select ng-model="step">
+    <option ng-repeat="option in conditions" value="{{option.id}}">{{option.name}}</option>
+</select>
+
+</body>
+</html>
